@@ -1,6 +1,6 @@
 #!/bin/bash
 apt-get update
-apt-get install firewalld
+apt-get install firewalld vim
 apt-get upgrade
 firewall-cmd --remove-service=ssh --permanent
 firewall-cmd --reload
