@@ -1,0 +1,34 @@
+Ideas of HackTheMachine
+
+CHALLENGE 1
+Given 13 aircraft with known wire issues, identify:
+  - list of maintenance actions that fixed the issues
+  - list of MSP codes for each maintenance action that fixed the issue
+
+HINT 1: Intermittent MSP codes related to the issue likey stopped after the repair.
+  - If we know when the repair occured, we can plot out the occurances of the
+    error codes vs. time and identify (visually) which error codes were
+    associated with the issue
+  - Conversely, if we can identify when unusual error codes suddenly stopped
+    occuring, we can reference the timestamps on the MAF to identify which
+    actions were taken around the same time to better understand which actions
+    could have fixed the issue
+  
+HINT 2: Some aircraft have clusters of wiring related MAFs and the same MSP codes can be
+correctly attributed to more than one MAF.
+  - If we identify the MSP codes associated with one wiring-related MAF, we can
+    take that same string of codes and do a sliding dot product
+    (cross-correlation) across the entire time-series of MSP codes to try and
+    identify if that same pattern occurs elsewhere in the data
+  - Or just do string matching on a sequence of values... That's less fancy but
+    much easier
+
+HINT 3: Some aircraft had more than one wiring inspection
+  - No thoughts on this
+
+"You may provide up to 200 maintenance actions as part of your solution. Additionally, 
+you can provide up to 10 MSP codes for each maintenance action"
+  - 2000 MSP code max for our submission
+
+"There is a challenge 1 submission spreadsheet template in the participant materials."
+  - Anyone know where this is?

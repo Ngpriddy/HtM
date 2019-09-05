@@ -1,8 +1,8 @@
 """
-Collection of functions useful for HackTheMachine 2019
+Collection of function useful for HackTheMachine 2019
 
 Author: Zachary Davis
-Date: 03-09-2019
+Date: 09-03-2019
 """
 
 import pandas as pd
